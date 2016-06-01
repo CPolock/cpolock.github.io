@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+		</head>
+		<body>
 				<script>
 				  window.fbAsyncInit = function() {
 				    FB.init({
@@ -18,11 +23,6 @@
 				     fjs.parentNode.insertBefore(js, fjs);
 				   }(document, 'script', 'facebook-jssdk'));
 				</script>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
 			<nav>
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
@@ -31,6 +31,14 @@
 	        		<li><a href="/blog">Blog</a></li>
 	    		</ul>
 			</nav>
+			
+			<div
+			  class="fb-like"
+			  data-share="true"
+			  data-width="450"
+			  data-show-faces="true">
+			</div>
+			
 			<div class="container">
 			
 			{{ content }}
