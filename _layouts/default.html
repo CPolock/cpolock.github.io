@@ -8,7 +8,27 @@
 		<body>
 			<h1 id="fb-welcome"></h1>
 			<br/>
-				<script>
+			<script>
+			  window.fbAsyncInit = function() {
+			    FB.init({
+			      appId      : '1802994426599743',
+			      xfbml      : true,
+			      version    : 'v2.6'
+			    });
+			
+			    // ADD ADDITIONAL FACEBOOK CODE HERE
+			  };
+			
+			  (function(d, s, id){
+			     var js, fjs = d.getElementsByTagName(s)[0];
+			     if (d.getElementById(id)) {return;}
+			     js = d.createElement(s); js.id = id;
+			     js.src = "//connect.facebook.net/en_US/sdk.js";
+			     fjs.parentNode.insertBefore(js, fjs);
+			   }(document, 'script', 'facebook-jssdk'));
+			</script>
+
+				<!--script>
 				  // This is called with the results from from FB.getLoginStatus().
 				  function statusChangeCallback(response) {
 				    console.log('statusChangeCallback');
@@ -95,8 +115,8 @@
 			  the FB.login() function when clicked.
 			-->
 
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-		</fb:login-button>
+		<!--fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+		</fb:login-button-->
 
 <div id="status">
 </div>
@@ -116,7 +136,7 @@
 			  data-show-faces="true">
 			</div>
 			
-			<div class="container">
+			<!--div class="container">
 			
 			{{ content }}
 			
