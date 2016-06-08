@@ -6,6 +6,8 @@
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
+			<h1 id="fb-welcome"></h1>
+			<br/>
 				<script>
 				  // This is called with the results from from FB.getLoginStatus().
 				  function statusChangeCallback(response) {
@@ -40,12 +42,10 @@
 				  }
 				
 				  window.fbAsyncInit = function() {
-				  FB.init({
-				    appId      : '254201861607793',
-				    cookie     : true,  // enable cookies to allow the server to access 
-				                        // the session
-				    xfbml      : true,  // parse social plugins on this page
-				    version    : 'v2.2' // use version 2.2
+				    FB.init({
+				      appId      : '248073318887314',
+				      xfbml      : true,
+				      version    : 'v2.6'
 				  });
 				
 				  // Now that we've initialized the JavaScript SDK, we call 
@@ -67,13 +67,13 @@
 				  };
 				
 				  // Load the SDK asynchronously
-				  (function(d, s, id) {
-				    var js, fjs = d.getElementsByTagName(s)[0];
-				    if (d.getElementById(id)) return;
-				    js = d.createElement(s); js.id = id;
-				    js.src = "//connect.facebook.net/en_US/sdk.js";
-				    fjs.parentNode.insertBefore(js, fjs);
-				  }(document, 'script', 'facebook-jssdk'));
+				  (function(d, s, id){
+				     var js, fjs = d.getElementsByTagName(s)[0];
+				     if (d.getElementById(id)) {return;}
+				     js = d.createElement(s); js.id = id;
+				     js.src = "//connect.facebook.net/en_US/sdk.js";
+				     fjs.parentNode.insertBefore(js, fjs);
+				   }(document, 'script', 'facebook-jssdk'));
 				
 				  // Here we run a very simple test of the Graph API after login is
 				  // successful.  See statusChangeCallback() for when this call is made.
@@ -121,10 +121,12 @@
 				<script>
 				  window.fbAsyncInit = function() {
 				    FB.init({
-				      appId      : '254201861607793',
+				      appId      : '248073318887314',
 				      xfbml      : true,
 				      version    : 'v2.6'
 				    });
+				
+				    // ADD ADDITIONAL FACEBOOK CODE HERE
 				  };
 				
 				  (function(d, s, id){
